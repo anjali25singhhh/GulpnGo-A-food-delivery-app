@@ -1,0 +1,106 @@
+/* .my-orders{
+    margin: 50px 0px;
+}
+.my-orders .container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+.my-orders-order{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 2fr 1fr;
+    align-items: center;
+    gap: 30px;
+    font-size: 14px;
+    padding: 10px 20px;
+    color: #454545;
+    border: 1px solid tomato;
+}
+.my-orders-order img{
+    width: 50px;
+}
+.my-orders-order p span{
+    color: tomato;
+}
+.my-orders-order p b{
+    font-weight: 500;
+    color: #454545;
+}
+.my-orders button{
+    border: none;
+    padding: 12px 0px;
+    border-radius: 4px;
+    background-color: #FFE1E1;
+    cursor: pointer;
+    color: #454545;
+}
+@media (max-width:900px) {
+    .my-orders-order{
+        grid-template-columns: 1fr 2fr 1fr;
+        row-gap: 5px;
+        font-size: 12px;
+    }
+    .my-orders-order button{
+        font-size: 10px;
+    }
+    
+} */
+
+
+.my-orders{
+    margin: 50px 0px;
+}
+.my-orders .container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+.my-orders-order{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 2fr 1fr;
+    align-items: center;
+    gap: 30px;
+    font-size: 14px;
+    padding: 10px 20px;
+    color: #5D4B85; /* Changed from #454545 to medium purple */
+    border: 1px solid #8A2BE2; /* Changed from tomato to purple */
+    border-radius: 4px; /* Added slight border radius */
+    box-shadow: 0 2px 4px rgba(138, 43, 226, 0.1); /* Added subtle shadow */
+}
+.my-orders-order img{
+    width: 50px;
+}
+.my-orders-order p span{
+    color: #B649E5; /* Changed from tomato to bright purple */
+    font-weight: 500;
+}
+.my-orders-order p b{
+    font-weight: 500;
+    color: #3E3257; /* Changed from #454545 to darker purple */
+}
+.my-orders button{
+    border: none;
+    padding: 12px 0px;
+    border-radius: 4px;
+    background-color: #F5F0FF; /* Changed from #FFE1E1 to light purple */
+    cursor: pointer;
+    color: #5D4B85; /* Changed from #454545 to medium purple */
+    transition: 0.3s;
+}
+.my-orders button:hover {
+    background-color: #E6D9F2; /* Slightly darker light purple on hover */
+    color: #3E3257; /* Darker text on hover */
+}
+@media (max-width:900px) {
+    .my-orders-order{
+        grid-template-columns: 1fr 2fr 1fr;
+        row-gap: 5px;
+        font-size: 12px;
+    }
+    .my-orders-order button{
+        font-size: 10px;
+    }
+    
+}

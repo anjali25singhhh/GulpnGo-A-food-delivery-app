@@ -1,0 +1,62 @@
+/* .app-download {
+    margin: 100px auto;
+    font-size: max(3vw, 20px);
+    text-align: center;
+    font-weight: 500;
+}
+.app-download-platforms{
+    display: flex;
+    justify-content: center;
+    gap: max(2vw,10px);
+    margin-top: 40px;
+}
+.app-download-platforms img{
+   width:max(30vw,120px);
+   max-width: 180px;
+   transition: 0.5s;
+   cursor: pointer;
+}
+.app-download-platforms img:hover{
+    transform: scale(1.05);
+ } */
+
+ .app-download {
+    margin: 100px auto;
+    font-size: max(3vw, 20px);
+    text-align: center;
+    font-weight: 500;
+    color: #5D4B85; /* Added purple text color to match theme */
+}
+.app-download-platforms{
+    display: flex;
+    justify-content: center;
+    gap: max(2vw,10px);
+    margin-top: 40px;
+}
+.app-download-platforms img{
+   width:max(30vw,120px);
+   max-width: 180px;
+   transition: 0.5s;
+   cursor: pointer;
+   filter: drop-shadow(0px 4px 8px rgba(138, 43, 226, 0.25)); /* Added purple shadow for platforms */
+}
+.app-download-platforms img:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(0px 6px 12px rgba(138, 43, 226, 0.4)); /* Enhanced shadow on hover */
+ }
+
+/* Optional: Add a subtle purple background or border if desired */
+.app-download {
+    position: relative;
+}
+.app-download::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #8A2BE2, #B649E5); /* Purple gradient accent */
+    border-radius: 2px;
+}

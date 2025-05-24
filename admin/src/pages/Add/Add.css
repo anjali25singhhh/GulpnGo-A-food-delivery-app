@@ -1,0 +1,564 @@
+/* .add{
+    width: 70%;
+    margin-left: max(5vw,25px);
+    margin-top: 50px;
+    color: #6D6D6D;
+    font-size: 16px;
+}
+.add form{
+   gap: 20px;
+}
+.add-img-upload img{
+    width: 120px;
+}
+.add-product-name, .add-product-description{
+    width: max(40%,280px);
+}
+.add-product-name input ,.add-product-description textarea{
+    padding: 10px 10px;
+}
+.add-category-price{
+    display: flex;
+    gap: 30px;
+}
+.add-category-price select,.add-category-price input{
+    max-width: 120px;
+    padding: 10px;
+}
+.add-btn{
+    max-width: 120px;
+    border: none;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+} */
+
+/* Gen Z Theme Variables */
+:root {
+    --purple: #8B5CF6;
+    --orange: #F97316;
+    --cyan: #06B6D4;
+    --pink: #EC4899;
+    --green: #22C55E;
+    --white: #FFFFFF;
+    --black: #000000;
+    --gradient: linear-gradient(135deg, var(--purple) 0%, var(--pink) 100%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.add {
+    width: 70%;
+    margin-left: max(5vw, 25px);
+    margin-top: 50px;
+    color: #6D6D6D;
+    font-size: 16px;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.15);
+    position: relative;
+    overflow: hidden;
+    animation: slideIn 0.6s ease-out;
+}
+
+.add::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--gradient);
+}
+
+.add form {
+    gap: 30px;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.add p {
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
+    position: relative;
+    display: inline-block;
+}
+
+.add p::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background: var(--gradient);
+    border-radius: 10px;
+}
+
+.add-img-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    perspective: 1000px;
+}
+
+.add-img-upload img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 2px dashed var(--purple);
+    padding: 8px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+    background-color: rgba(139, 92, 246, 0.05);
+}
+
+.add-img-upload img:hover {
+    border-color: var(--pink);
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 20px 30px rgba(236, 72, 153, 0.2);
+}
+
+.add-product-name, .add-product-description {
+    width: max(40%, 280px);
+    position: relative;
+    z-index: 1;
+}
+
+.add-product-name input,
+.add-product-description textarea {
+    padding: 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 16px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    animation: inputFade 0.5s ease-out forwards;
+}
+
+.add-product-name input:focus,
+.add-product-description textarea:focus,
+.add-category-price select:focus,
+.add-category-price input:focus {
+    outline: none;
+    border-color: var(--purple);
+    box-shadow: 0 5px 20px rgba(139, 92, 246, 0.15);
+    transform: translateY(-2px);
+}
+
+.add-category-price {
+    display: flex;
+    gap: 30px;
+    margin-top: 5px;
+    position: relative;
+}
+
+.add-category-price select,
+.add-category-price input {
+    max-width: 170px;
+    padding: 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 16px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background-color: var(--white);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+.add-category {
+    position: relative;
+    animation: slideInRight 0.5s ease-out forwards;
+}
+
+.add-price {
+    animation: slideInLeft 0.5s ease-out forwards;
+}
+
+.add-category select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 35px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238B5CF6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 18px;
+    cursor: pointer;
+}
+
+.add-category select:hover {
+    border-color: var(--cyan);
+}
+
+.add-btn {
+    width: 170px;
+    border: none;
+    padding: 16px 20px;
+    background: var(--gradient);
+    color: white;
+    border-radius: 100px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin-top: 20px;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+    animation: buttonPulse 2s infinite;
+}
+
+.add-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--orange) 0%, var(--pink) 100%);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease;
+}
+
+.add-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(139, 92, 246, 0.4);
+}
+
+.add-btn:hover::before {
+    opacity: 1;
+}
+
+.add-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 10px rgba(139, 92, 246, 0.4);
+}
+
+/* Color accents for different categories with Gen Z style */
+.add-category select option[value="Salad"] {
+    background-color: rgba(34, 197, 94, 0.1);
+}
+
+.add-category select option[value="Rolls"] {
+    background-color: rgba(236, 72, 153, 0.1);
+}
+
+.add-category select option[value="Deserts"] {
+    background-color: rgba(249, 115, 22, 0.1);
+}
+
+.add-category select option[value="Sandwich"] {
+    background-color: rgba(6, 182, 212, 0.1);
+}
+
+.add-category select option[value="Cake"] {
+    background-color: rgba(236, 72, 153, 0.1);
+}
+
+.add-category select option[value="Pure Veg"] {
+    background-color: rgba(34, 197, 94, 0.1);
+}
+
+.add-category select option[value="Pasta"] {
+    background-color: rgba(249, 115, 22, 0.1);
+}
+
+.add-category select option[value="Noodles"] {
+    background-color: rgba(6, 182, 212, 0.1);
+}
+
+/* --- Gen Z Cool Animations --- */
+@keyframes slideIn {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes inputFade {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes buttonPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(236, 72, 153, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(236, 72, 153, 0);
+    }
+}
+
+@keyframes success-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(34, 197, 94, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    }
+}
+
+/* Fun emoji label for upload */
+.add-img-upload label::before {
+    content: "📷";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    opacity: 0.3;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.add-img-upload:hover label::before {
+    opacity: 0.5;
+    animation: spin 2s ease infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(180deg) scale(1.2);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) scale(1);
+    }
+}
+
+/* Funky form completion effect */
+.add form.submitted .add-btn {
+    animation: success-pulse 1.5s ease;
+    background: linear-gradient(135deg, var(--green) 0%, var(--cyan) 100%);
+}
+
+/* Cool background elements */
+.add::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, var(--purple) 0%, transparent 60%);
+    border-radius: 50%;
+    top: -150px;
+    right: -150px;
+    opacity: 0.1;
+    z-index: 0;
+    animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive adjustments with Gen Z touch */
+@media (max-width: 768px) {
+    .add {
+        width: 90%;
+        padding: 25px 20px;
+        border-radius: 20px;
+    }
+    
+    .add-category-price {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .add-category-price select,
+    .add-category-price input {
+        max-width: 100%;
+    }
+    
+    .add-btn {
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    .add-img-upload img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    /* Add fun emoji feedback for mobile */
+    .add-product-name input:focus + .emoji-feedback,
+    .add-product-description textarea:focus + .emoji-feedback {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .emoji-feedback {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        font-size: 1.5rem;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+        pointer-events: none;
+    }
+}
+
+/* Neo-brutalism touches for Gen Z */
+.add input::placeholder,
+.add textarea::placeholder {
+    color: #bcbcbc;
+    font-style: italic;
+    transition: all 0.3s ease;
+}
+
+.add input:focus::placeholder,
+.add textarea:focus::placeholder {
+    opacity: 0.5;
+    transform: translateX(5px);
+}
+
+/* Added sticker-like elements for Gen Z vibe */
+.sticker {
+    position: absolute;
+    font-size: 1.5rem;
+    transform: rotate(-15deg);
+    filter: drop-shadow(2px 2px 0 rgba(0,0,0,0.1));
+    z-index: 10;
+    animation: wobble 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.sticker-1 {
+    top: 20px;
+    right: 30px;
+}
+
+.sticker-2 {
+    bottom: 30px;
+    left: 20px;
+}
+
+@keyframes wobble {
+    0%, 100% {
+        transform: rotate(-15deg);
+    }
+    50% {
+        transform: rotate(-12deg) translateY(-5px);
+    }
+}
+
+/* Script to add to React component for full Gen Z effect 
+Add this to your Add.js component to add the stickers and emoji feedback:
+
+useEffect(() => {
+    // Add stickers
+    const form = document.querySelector('.add');
+    const sticker1 = document.createElement('div');
+    sticker1.className = 'sticker sticker-1';
+    sticker1.innerHTML = '🔥';
+    form.appendChild(sticker1);
+    
+    const sticker2 = document.createElement('div');
+    sticker2.className = 'sticker sticker-2';
+    sticker2.innerHTML = '✨';
+    form.appendChild(sticker2);
+    
+    // Add emoji feedback
+    const inputs = document.querySelectorAll('input, textarea');
+    inputs.forEach(input => {
+        const feedback = document.createElement('div');
+        feedback.className = 'emoji-feedback';
+        feedback.innerHTML = '👌';
+        input.parentNode.appendChild(feedback);
+    });
+    
+    // Add submitted class on form submission for animation
+    const addForm = document.querySelector('.add form');
+    addForm.addEventListener('submit', () => {
+        addForm.classList.add('submitted');
+        setTimeout(() => {
+            addForm.classList.remove('submitted');
+        }, 2000);
+    });
+}, []);
+*/
+ 

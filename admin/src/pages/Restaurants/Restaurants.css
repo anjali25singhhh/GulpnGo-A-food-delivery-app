@@ -1,0 +1,54 @@
+/* src/pages/Restaurants/Restaurants.css */
+
+.restaurants-container {
+  max-width: 700px;
+  margin: 30px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.restaurants-container h2 {
+  color: #2c3e50;
+  border-bottom: 3px solid #27ae60;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.restaurants-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.restaurants-container li {
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.07);
+  transition: box-shadow 0.3s ease;
+}
+
+.restaurants-container li:hover {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.restaurants-container h3 {
+  margin: 0 0 8px;
+  color: #34495e;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.restaurants-container p {
+  margin: 4px 0;
+  color: #555;
+  font-size: 1rem;
+}
+
+.restaurants-container p strong {
+  color: #27ae60;
+}
